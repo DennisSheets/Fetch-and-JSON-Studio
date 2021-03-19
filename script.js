@@ -4,6 +4,8 @@ window.addEventListener("load", ()=> {
             //console.log(json);
         const container = document.getElementById("container");
 
+        json = json.sort(function(a, b){return b.hoursInSpace-a.hoursInSpace}); // added this line to sort the json for the bonus.
+
         container.innerHTML=`<p>Total Astronauts: ${json.length}</p>`
          
         for (let i=0; i<json.length; i++) {
